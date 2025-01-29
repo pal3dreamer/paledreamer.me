@@ -8,7 +8,7 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "🪴 Quartz 4.0",
+    pageTitle: "paledreamer.me",
     pageTitleSuffix: "",
     enableSPA: true,
     enablePopovers: true,
@@ -19,7 +19,15 @@ const config: QuartzConfig = {
     baseUrl: "paledreamer.me",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "created",
-    generateSocialImages: false,
+      generateSocialImages: {
+  colorScheme: "darkMode", // what colors to use for generating image, same as theme colors from config, valid values are "darkMode" and "lightMode"
+  width: 1200, // width to generate with (in pixels)
+  height: 630, // height to generate with (in pixels)
+  excludeRoot: false, // wether to exclude "/" index path to be excluded from auto generated images (false = use auto, true = use default og image)
+  socialImage: "quartz/static/social.png",
+  socialDescription: "paledreamer's personal website & blog",
+}
+ ,
     theme: {
       fontOrigin: "googleFonts",
       cdnCaching: true,
@@ -41,13 +49,13 @@ const config: QuartzConfig = {
           textHighlight: "#fff23688",
         },
         darkMode: {
-          light: "#161618",
+          light: "#000000",
           lightgray: "#393639",
           gray: "#646464",
           darkgray: "#d4d4d4",
           dark: "#ebebec",
-          secondary: "#7b97aa",
-          tertiary: "#84a59d",
+          secondary: "#AAFAC8",
+          tertiary: "#099AB8",
           highlight: "rgba(143, 159, 169, 0.15)",
           textHighlight: "#b3aa0288",
         },
@@ -93,3 +101,5 @@ const config: QuartzConfig = {
 }
 
 export default config
+
+
